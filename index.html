@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body>
+	<!-- progressbar -->
+	<div class="progressbar">
+		<div class="progressbar__step">
+			<div class="progressbar__path"></div>
+			<div class="progressbar__number current" data-step="1">1</div>
+		</div>
+
+		<div class="progressbar__step">
+			<div class="progressbar__path"></div>
+			<div class="progressbar__number" data-step="2">2</div>
+		</div>
+
+		<div class="progressbar__step">
+			<div class="progressbar__path"></div>
+			<div class="progressbar__number" data-step="3">3</div>
+		</div>
+
+		<div class="progressbar__step">
+			<div class="progressbar__number" data-step="4">4</div>
+		</div>
+	</div>
+
+	<!-- slider -->
+	<div class="slide-panel js-panel">
+		<div class="slide-panel__viewport">
+			<!-- <div class="js-previous-slide" data-direction="reverse">< previous</div> -->
+			<ul class="slide-panel__items js-slides">
+				<li class="slide-panel__item js-slide">
+					<div class="slide-panel__question">What is your running goal?</div>
+					<div class="slide-panel__buttons">
+						<div class="slide-panel__button js-answer">Run Further</div>
+						<div class="slide-panel__button js-answer">Run Faster</div>
+					</div>
+				</li>
+				<li class="slide-panel__item js-slide">
+					<div class="slide-panel__question">What type of shoe are you looking for?</div>
+					<div class="slide-panel__buttons">
+						<div class="slide-panel__button js-answer">Women's</div>
+						<div class="slide-panel__button js-answer">Men's</div>
+					</div>
+				</li>
+				<li class="slide-panel__item js-slide">
+					<div class="slide-panel__question">What is your typical running terrain?</div>
+					<div class="slide-panel__buttons">
+						<div class="slide-panel__button js-answer">Road</div>
+						<div class="slide-panel__button js-answer">Trail</div>
+					</div>
+				</li>
+				<li class="slide-panel__item js-slide">
+					<div class="slide-panel__question">Support Type</div>
+					<div class="slide-panel__buttons">
+						<div class="slide-panel__button js-answer">Flat footed</div>
+						<div class="slide-panel__button js-answer">High Arch</div>
+					</div>
+				</li>
+			</ul>
+			<div class="slide-panel__navigation">
+				<span class="slide-panel__nav-left js-left-nav" data-direction="left">Answer 2</span>
+				<span class="slide-panel__nav-right js-right-nav" data-direction="right">Answer 1</span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

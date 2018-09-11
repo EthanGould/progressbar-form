@@ -1,0 +1,50 @@
+.slide-panel {
+	position: relative;
+	transition: all 0.5s;
+	width: 70%;
+	margin: 0 auto;
+	font-family: sans-serif;
+
+	&__viewport{
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		transition: all .5s;
+	}
+
+	&__item {
+		height: 100vh;
+		min-width: 100%;
+		box-sizing: border-box;
+		padding: 80px 20px;
+		text-align: center;
+		font-family: sans-serif;
+	}
+
+	&__question {
+		margin-bottom: 40px;
+		font-size: 28px;
+	}
+	
+	&__buttons {
+		display: flex;
+		justify-content: space-evenly;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	&__button {
+		padding: 10px 30px;
+		background-color: #02c3e6;
+		color: #001e63;
+		font-size: 18px;
+		min-width: 100px;
+	}
+}

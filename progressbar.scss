@@ -1,0 +1,117 @@
+.progressbar {
+	width: 70%;
+	margin: 50px auto;
+	display: flex;
+	font-family: sans-serif;
+
+	&__step {
+		flex-grow: 1;
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	&__path {
+		width: 100%;
+		height: 10px;
+		position: absolute;
+		top: 36%;
+		right: -1px;
+		z-index: -1;
+		border: 1px solid lightgrey;
+		overflow: hidden;
+		box-sizing: border-box;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			transform: translateX(-100%);
+			transition: transform 1s;
+			box-sizing: border-box;
+		}
+
+		&.complete {
+			border: 1px solid #d1de01;
+
+			&::after {
+				transform: translateX(0);
+				background-color: #d1de01;
+			}
+		}
+	}
+
+	&__number {
+		height: 20px;
+		width: 20px;
+		padding: 10px;
+		border-radius: 50%;
+		border: 1px solid lightgrey;
+		text-align: center;
+		float: left;
+		background-color: white;
+		position: relative;
+		color: lightgrey;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: -1px;
+			bottom: -1px;
+			left: -1px;
+			right: -1px;
+			border-radius: 50%;
+			transform: scale(0);
+			background-color: #d1de01;
+			transition: transform 0.5s;
+		}
+
+		&.current {
+			animation-name: enlargeBubble;
+			animation-duration: 0.5s;
+			animation-delay: 0.5s;
+			animation-fill-mode: forwards;
+			color: #001e63;
+		}
+
+		&.complete {
+			border: 1px solid #d1de01;
+
+			&::after {
+				animation-name: fillBubble;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				content: '✔';
+				text-align: center;
+				padding: 12px 10px 10px;
+				color: #001e63;
+			}
+		}
+	}
+}
+
+@keyframes fillBubble {
+	from { transform: scale(0); }
+
+	to { transform: scale(1); }
+}
+
+@keyframes enlargeBubble {
+	from { transform: scale(1); }
+
+	to {
+		transform: scale(1.5);
+    	box-shadow: 0 0 10px #d1de01;
+		border: 1px solid transparent;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.progressbar {
+		margin-right: 7.5%;
+	}
+}
